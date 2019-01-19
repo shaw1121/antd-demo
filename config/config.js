@@ -2,7 +2,8 @@
 export default {
     plugins: [
       ['umi-plugin-react', {
-        antd: true
+        antd: true, // 视图
+        dva: true, // 数据
       }],
     ],
     routes: [{
@@ -16,6 +17,10 @@ export default {
         {
           path: '/helloworld',
           component: 'Helloworld'
+        },
+        {
+          path: 'puzzlecards',
+          component: './puzzlecards'
         },
         {
           path: '/dashboard',
