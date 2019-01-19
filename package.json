@@ -16,6 +16,8 @@
     "umi-plugin-react": "^1.4.1"
   },
   "dependencies": {
-    "antd": "^3.12.3"
+    "antd": "^3.12.3",
+    "deva-cli": "^0.2.0",
+    "dva": "^2.4.1"
   }
 }
