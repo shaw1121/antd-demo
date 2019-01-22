@@ -13,20 +13,35 @@ const mapStateToProps = (state) => {
     }
 };
 
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//         onClickAdd: (newCard) => {
+//             const action = {
+//                 type: `${namespace}/addNewCard`,
+//                 payload: newCard
+//             };
+//             dispatch(action);
+//         }
+//     }
+// }
+
+// 请求服务单数据
 const mapDispatchToProps = (dispatch) => {
     return {
-        onClickAdd: (newCard) => {
-            const action = {
-                type: `${namespace}/addNewCard`,
-                payload: newCard
-            };
-            dispatch(action);
+        onDidMount: () => {
+            dispatch({
+                type: `${namespace}/queryInitCards`,
+            })
         }
     }
 }
 
 @connect(mapStateToProps, mapDispatchToProps)
 class PuzzleCardsPage extends React.Component {
+
+    componentDidMount() {
+        this.props.onDidMount;
+    }
 
     render() {
         return (
@@ -43,12 +58,12 @@ class PuzzleCardsPage extends React.Component {
                         )
                     })                    
                 }
-                <div>
+                {/* <div>
                     <Button onClick={() => this.props.onClickAdd({
                         setup: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
                         punchline: 'here we use dva',
                     })}>添加卡片</Button>
-                </div>
+                </div> */}
             </div>
         )
     }

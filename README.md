@@ -22,7 +22,7 @@ https://juejin.im/post/5a71322cf265da3e4e25eff3
 
 props 和 state 对于一个组件来讲都是数据的来源，而 state 又可以通过 props 传递给子组件，这像是一个鸡生蛋蛋生鸡的问题：到底谁是数据的源头 ？答案是 state，而且是广义的 state：它可以是 react 组件树中各级组件的 state，也可以是 react 组件树外部由其他 js 数据结构表示的 state，而 dva 管理的就是 react 组件树之外的 state: Redux。归根结底，props 是用来传导数据的，而 state 是数据改变的源泉。
 
-> reducer 干的事情和 React 中 setState(prevState => { ... }) 很像，都要返回一个新构造的对象，但区别是：reducer 的返回值会 整个取代 (Replace) 老的 state，而 setState 中回调函数的返回值是会 融合(Merge) 到老的 state 中去。
+> reducer 干的事情和 React 中 setState(prevState => { ... }) 很像，都要返回一个新构造的对象，但区别是：reducer 的返回值会 整个取代 (Replace) 老的 state，而 setState 中回调函数的返回值是会 融合(Merge) 到老的 state 中去。
 
 
 ## css
